@@ -1,0 +1,15 @@
+.container {
+  @apply max-w-4xl px-5;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-xl bg-neutral-400;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
