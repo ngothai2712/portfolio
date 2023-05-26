@@ -4,7 +4,9 @@
       <div class="info">
         <div class="info-main">
           <h1>Front End Developer</h1>
-          <p>Hi, I'm Ngo Hoang Thai. A Front-end Developer.</p>
+          <p class="info-description">
+            Hi, I'm Ngo Hoang Thai. A Front-end Developer.
+          </p>
           <ul class="info-contact">
             <li v-for="contact in contactUrl" :key="contact.name">
               <a :href="contact.url" rel="noreferrer" target="_blank">
@@ -14,6 +16,7 @@
                   width="30"
                   height="30"
                   loading="lazy"
+                  class="info-icon"
                 />
               </a>
             </li>
@@ -66,11 +69,11 @@ const techStacks = [
 
 <style scoped lang="scss">
 h1 {
-  @apply mb-3 text-3xl font-bold md:mb-4 md:text-6xl;
+  @apply mb-3 text-3xl font-bold dark:text-white md:mb-4 md:text-6xl;
 }
 
 #home {
-  @apply flex items-center bg-stone-50 pb-12 pt-32 md:h-screen md:pb-0 md:pt-0;
+  @apply flex items-center bg-stone-50 pb-12 pt-32 dark:bg-slate-900 md:h-screen md:pb-0 md:pt-0;
 }
 
 .container {
@@ -82,6 +85,14 @@ h1 {
 
   &-main {
     @apply order-1 text-center md:order-none md:text-left;
+  }
+
+  &-description {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+
+  &-icon {
+    @apply dark:invert;
   }
 
   &-img {
@@ -113,14 +124,14 @@ h1 {
   @apply mt-8 flex flex-col flex-wrap items-center gap-10 md:mt-16 md:flex-row;
 
   &-text {
-    @apply whitespace-nowrap border-b-2 border-b-gray-400 text-xl font-semibold md:border-b-0 md:border-r-2 md:border-r-gray-400 md:pr-4;
+    @apply whitespace-nowrap border-b-2 border-b-gray-400 text-xl font-semibold dark:text-white md:border-b-0 md:border-r-2 md:border-r-gray-400 md:pr-4;
   }
 
   &-skills {
     @apply inline-flex flex-wrap justify-center gap-5 md:justify-start;
 
     li {
-      @apply flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white shadow-md;
+      @apply flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white shadow-md dark:bg-slate-300/10;
     }
   }
 }

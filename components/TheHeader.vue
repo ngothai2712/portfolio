@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import MobileDetect from 'mobile-detect';
-const menus = ['home', 'about', 'project', 'contact'];
+const menus = ['home', 'about', 'contact'];
 
 const colorMode = useColorMode();
 
@@ -80,7 +80,10 @@ const onResize = () => {
 
 <style scoped lang="scss">
 .header {
-  @apply fixed left-0 top-0 z-50 flex h-[80px] w-screen items-center justify-between bg-white px-6 shadow-md dark:bg-slate-900 md:px-16;
+  @apply fixed left-0 top-0 z-50 flex h-[80px]
+  w-screen items-center justify-between
+  border-b border-slate-900/10 bg-white px-6
+  dark:border-slate-300/10 dark:bg-slate-900 md:px-16;
 
   &-right {
     @apply flex items-center gap-6 dark:text-white;
@@ -89,7 +92,7 @@ const onResize = () => {
 
 .header-menu {
   &__icon {
-    @apply inline-block md:hidden;
+    @apply inline-block dark:invert md:hidden;
   }
 
   &__wrap {
