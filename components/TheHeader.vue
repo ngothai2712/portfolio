@@ -108,4 +108,8 @@ const onResize = () => {
 .link {
   @apply font-semibold capitalize;
 }
+
+svg {
+  @apply cursor-pointer;
+}
 </style>

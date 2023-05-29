@@ -5,6 +5,6 @@
 @layer base {
   html {
     @apply scroll-smooth;
-    font-family: Open Sans, system-ui, sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
   }
 }

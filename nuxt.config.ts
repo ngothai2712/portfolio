@@ -15,10 +15,10 @@ export default defineNuxtConfig({
           type: 'image/x-icon',
           href: '/favicon.ico',
         },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap',
-        },
+        // {
+        //   rel: 'stylesheet',
+        //   href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap',
+        // },
       ],
       meta: [
         {
@@ -67,7 +67,26 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          'Open+Sans': {
+            wght: [400, 500, 600, 700],
+          },
+        },
+        display: 'swap',
+        prefetch: false,
+        preconnect: false,
+        preload: false,
+        download: true,
+        base64: false,
+      },
+    ],
+  ],
 
   // Config TailwindCSS
   tailwindcss: {
