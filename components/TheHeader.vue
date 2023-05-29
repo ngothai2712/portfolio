@@ -11,6 +11,7 @@
         width="40"
         height="40"
         class="header-menu__icon"
+        loading="lazy"
       />
       <div class="header-menu__wrap">
         <NuxtLink

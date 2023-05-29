@@ -1,13 +1,13 @@
 <template>
   <section id="contact">
     <div class="container">
-      <h3 class="content-heading">CONTACT</h3>
+      <h2 class="content-heading">CONTACT</h2>
       <p class="content-description">Don't be shy! Contact me!</p>
 
       <div class="items">
         <div class="item">
           <div class="item-icon">
-            <img src="/location.svg" alt="email" />
+            <img src="/location.svg" alt="email" loading="lazy" />
           </div>
           <div class="item-right">
             <h3 class="item-title">Location</h3>
@@ -16,7 +16,7 @@
         </div>
         <div class="item">
           <div class="item-icon">
-            <img src="/email.svg" alt="email" />
+            <img src="/email.svg" alt="email" loading="lazy" />
           </div>
           <div class="item-right">
             <h3 class="item-title">Mail</h3>

@@ -6,14 +6,15 @@
           <img
             src="/about.svg"
             alt=""
-            width="350"
-            height="350"
+            width="320"
+            height="320"
             class="about-img__large"
+            loading="lazy"
           />
         </div>
 
         <div class="about-content">
-          <h3 class="content-heading">ABOUT ME</h3>
+          <h2 class="content-heading">ABOUT ME</h2>
           <p class="content-title">A Front-End Developer</p>
           <p class="content-description">
             As a Front-End Developer, I possess an impressive arsenal of skills
@@ -48,7 +49,7 @@
 
 .content {
   &-heading {
-    @apply font-bold text-blue-500;
+    @apply font-bold text-blue-600;
   }
 
   &-title {

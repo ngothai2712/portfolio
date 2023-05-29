@@ -4,7 +4,17 @@ export default defineNuxtConfig({
     head: {
       title: 'Ngo Hoang Thai',
       titleTemplate: '%s - Front End Developer',
+      htmlAttrs: {
+        lang: 'en',
+      },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
       link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap',
@@ -17,6 +27,41 @@ export default defineNuxtConfig({
           name: 'description',
           content:
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
+        },
+        {
+          key: 'og:title',
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Ngo Hoang Thai | Front End Developer',
+        },
+        {
+          key: 'og:description',
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
+        },
+        {
+          key: 'og:type',
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          key: 'og:image',
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://ngothai2712.site/info.webp',
+        },
+        {
+          key: 'og:url',
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://ngothai2712.site/',
+        },
+        {
+          property: 'og:locale',
+          content: 'vi_VN',
         },
       ],
     },
@@ -32,7 +77,7 @@ export default defineNuxtConfig({
 
   // Config Dark Mode TailwindCSS
   colorMode: {
-    preference: 'system', // default value of $colorMode.preference
+    preference: 'dark', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
     hid: 'nuxt-color-mode-script',
     globalName: '__NUXT_COLOR_MODE__',
