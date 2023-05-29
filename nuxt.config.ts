@@ -10,6 +10,15 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap',
         },
       ],
+      meta: [
+        {
+          key: 'description',
+          hid: 'description',
+          name: 'description',
+          content:
+            'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
+        },
+      ],
     },
   },
 

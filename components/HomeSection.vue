@@ -96,8 +96,8 @@ h1 {
   }
 
   &-img {
-    @apply h-[120px] w-[120px] min-w-[120px]
-    border-4 bg-[url('/info-img.jpg')] bg-cover bg-center bg-no-repeat md:h-[350px] md:w-[350px] md:min-w-[350px];
+    @apply h-[240px] w-[240px] min-w-[240px]
+    border-4 bg-[url('/info.webp')] bg-cover bg-center bg-no-repeat md:h-[350px] md:w-[350px] md:min-w-[350px];
     animation: morph 8s ease-in-out infinite;
   }
 

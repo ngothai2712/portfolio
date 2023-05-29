@@ -55,10 +55,10 @@ const onClick = () => {
 
 <style scoped lang="scss">
 .headerMobile {
-  @apply fixed bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-white;
+  @apply fixed bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-white dark:bg-slate-900 dark:text-white;
 
   &-icon {
-    @apply absolute right-8 top-8;
+    @apply absolute right-8 top-8 dark:invert;
   }
 
   &-links {
