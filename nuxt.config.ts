@@ -15,10 +15,6 @@ export default defineNuxtConfig({
           type: 'image/x-icon',
           href: '/favicon.ico',
         },
-        // {
-        //   rel: 'stylesheet',
-        //   href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap',
-        // },
       ],
       meta: [
         {
