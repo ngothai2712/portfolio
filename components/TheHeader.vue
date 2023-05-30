@@ -36,7 +36,6 @@
 </template>
 
 <script setup lang="ts">
-import MobileDetect from 'mobile-detect';
 const menus = ['home', 'about', 'contact'];
 
 const colorMode = useColorMode();
@@ -46,10 +45,9 @@ const onChangeTheme = (theme) => {
 };
 
 const isShowHeaderMobile = ref(false);
-const isMobile = ref(false);
 
-onBeforeMount(() => {
-  detectDevice();
+onMounted(() => {
+  onResize();
 });
 
 onMounted(() => {
@@ -60,22 +58,10 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', onResize);
 });
 
-const detectDevice = () => {
-  const md = new MobileDetect(window.navigator.userAgent);
-
-  const mobile = md.mobile();
-  const tablet = md.tablet();
-  const phone = md.phone();
-
-  isMobile.value = !!mobile || !!tablet || !!phone;
-
-  if (isShowHeaderMobile.value) {
+const onResize = () => {
+  if (window.screen.width > 767.98) {
     isShowHeaderMobile.value = false;
   }
-};
-
-const onResize = () => {
-  detectDevice();
 };
 </script>
 
