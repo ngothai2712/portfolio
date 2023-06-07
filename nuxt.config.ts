@@ -13,18 +13,19 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/x-icon',
-          href: '/favicon.ico',
+          href: 'https://ngothai2712.site/favicon.ico',
         },
         {
           rel: 'icon',
           type: 'image/png',
-          href: '/favicon.png',
+          href: 'https://ngothai2712.site/favicon.png',
         },
       ],
       meta: [
         {
           key: 'description',
           hid: 'description',
+          property: 'description',
           name: 'description',
           content:
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
@@ -33,12 +34,14 @@ export default defineNuxtConfig({
           key: 'og:title',
           hid: 'og:title',
           property: 'og:title',
+          name: 'og:title',
           content: 'Ngo Hoang Thai | Front End Developer',
         },
         {
           key: 'og:description',
           hid: 'og:description',
           property: 'og:description',
+          name: 'og:description',
           content:
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
         },
@@ -46,23 +49,67 @@ export default defineNuxtConfig({
           key: 'og:type',
           hid: 'og:type',
           property: 'og:type',
+          name: 'og:type',
           content: 'website',
         },
         {
           key: 'og:image',
           hid: 'og:image',
           property: 'og:image',
+          name: 'og:image',
           content: 'https://ngothai2712.site/info.webp',
         },
         {
           key: 'og:url',
           hid: 'og:url',
           property: 'og:url',
+          name: 'og:url',
           content: 'https://ngothai2712.site/',
         },
         {
+          key: 'og:locale',
+          hid: 'og:locale',
           property: 'og:locale',
+          name: 'og:locale',
           content: 'vi_VN',
+        },
+
+        // Twitter
+        {
+          key: 'twitter:card',
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          key: 'twitter:site',
+          hid: 'twitter:site',
+          property: 'twitter:site',
+          name: 'twitter:site',
+          content: 'ngothai2712',
+        },
+        {
+          key: 'twitter:title',
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Ngo Hoang Thai | Front End Developer',
+        },
+        {
+          key: 'twitter:description',
+          hid: 'twitter:description',
+          property: 'twitter:description',
+          name: 'twitter:description',
+          content:
+            'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
+        },
+        {
+          key: 'twitter:image',
+          hid: 'twitter:image',
+          property: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://ngothai2712.site/info.webp',
         },
       ],
     },
