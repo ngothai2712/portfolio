@@ -13,12 +13,12 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/x-icon',
-          href: 'https://ngothai2712.site/favicon.ico',
+          href: 'https://ngothai2712.net/favicon.ico',
         },
         {
           rel: 'icon',
           type: 'image/png',
-          href: 'https://ngothai2712.site/favicon.png',
+          href: 'https://ngothai2712.net/favicon.png',
         },
       ],
       meta: [
@@ -57,14 +57,14 @@ export default defineNuxtConfig({
           hid: 'og:image',
           property: 'og:image',
           name: 'og:image',
-          content: 'https://ngothai2712.site/info.webp',
+          content: 'https://ngothai2712.net/info.webp',
         },
         {
           key: 'og:url',
           hid: 'og:url',
           property: 'og:url',
           name: 'og:url',
-          content: 'https://ngothai2712.site/',
+          content: 'https://ngothai2712.net/',
         },
         {
           key: 'og:locale',
@@ -109,7 +109,7 @@ export default defineNuxtConfig({
           hid: 'twitter:image',
           property: 'twitter:image',
           name: 'twitter:image',
-          content: 'https://ngothai2712.site/info.webp',
+          content: 'https://ngothai2712.net/info.webp',
         },
       ],
     },
