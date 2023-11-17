@@ -111,6 +111,14 @@ export default defineNuxtConfig({
           name: 'twitter:image',
           content: 'https://ngothai2712.net/info.webp',
         },
+
+        //PWA
+        {
+          key: 'theme-color',
+          hid: 'theme-color',
+          name: 'theme-color',
+          content: '#0f172a',
+        },
       ],
     },
   },
@@ -134,7 +142,46 @@ export default defineNuxtConfig({
         base64: false,
       },
     ],
+    '@vite-pwa/nuxt',
   ],
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Porfolio ThaiNH',
+      short_name: 'Porfolio ThaiNH',
+      background_color: '#0f172a',
+      theme_color: '#0f172a',
+      icons: [
+        {
+          src: 'favicon.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'favicon.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+        {
+          src: 'favicon.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,webp,jpeg,jpg,json}'],
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module',
+    },
+    manifestFilename: 'manifest.json',
+  },
 
   // Config TailwindCSS
   tailwindcss: {

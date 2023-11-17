@@ -18,9 +18,9 @@
           <p class="content-title">A Front-End Developer</p>
           <p class="content-description">
             As a Front-End Developer, I possess an impressive arsenal of skills
-            in HTML, CSS, JavaScript, VueJS, NuxtJS, Tailwind, and SCSS. I excel
-            in designing and maintaining responsive websites that offer a smooth
-            user experience.
+            in HTML, CSS, JavaScript, TypeScript VueJS, NuxtJS, Tailwind, and
+            SCSS. I excel in designing and maintaining responsive websites that
+            offer a smooth user experience.
           </p>
         </div>
       </div>
