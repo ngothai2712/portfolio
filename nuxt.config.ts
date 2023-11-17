@@ -173,14 +173,8 @@ export default defineNuxtConfig({
     },
     workbox: {
       globPatterns: ['**/*.{js,css,html,png,svg,ico,webp,jpeg,jpg,json}'],
+      globIgnores: ['**/node_modules/**/*', 'sw.js', 'workbox-*.js'],
     },
-    devOptions: {
-      enabled: true,
-      suppressWarnings: true,
-      navigateFallbackAllowlist: [/^\/$/],
-      type: 'module',
-    },
-    manifestFilename: 'manifest.json',
   },
 
   // Config TailwindCSS

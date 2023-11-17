@@ -1,6 +1,6 @@
 <template>
   <nav class="header">
-    <h3 class="logo">T27.dev</h3>
+    <h3 class="logo">T27 dev</h3>
     <!--    <IconLogo class="small" />-->
 
     <div class="header-right">
