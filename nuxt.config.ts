@@ -148,8 +148,8 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Porfolio ThaiNH',
-      short_name: 'Porfolio ThaiNH',
+      name: 'Portfolio ThaiNH',
+      short_name: 'Portfolio ThaiNH',
       background_color: '#0f172a',
       theme_color: '#0f172a',
       icons: [
