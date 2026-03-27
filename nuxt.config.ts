@@ -23,7 +23,6 @@ export default defineNuxtConfig({
       ],
       meta: [
         {
-          key: 'description',
           hid: 'description',
           property: 'description',
           name: 'description',
@@ -31,14 +30,25 @@ export default defineNuxtConfig({
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
         },
         {
-          key: 'og:title',
           hid: 'og:title',
           property: 'og:title',
           name: 'og:title',
           content: 'Ngo Hoang Thai | Front End Developer',
         },
         {
-          key: 'og:description',
+          hid: 'og:title',
+          property: 'og:title',
+          name: 'og:title',
+          content: 'ngothai2712 | Front End Developer',
+        },
+        {
+          key: 'og:title',
+          hid: 'og:title',
+          property: 'og:title',
+          name: 'og:title',
+          content: 'Ngô Hoàng Thái | Front End Developer',
+        },
+        {
           hid: 'og:description',
           property: 'og:description',
           name: 'og:description',
@@ -46,28 +56,24 @@ export default defineNuxtConfig({
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
         },
         {
-          key: 'og:type',
           hid: 'og:type',
           property: 'og:type',
           name: 'og:type',
           content: 'website',
         },
         {
-          key: 'og:image',
           hid: 'og:image',
           property: 'og:image',
           name: 'og:image',
           content: 'https://ngothai2712.net/info.webp',
         },
         {
-          key: 'og:url',
           hid: 'og:url',
           property: 'og:url',
           name: 'og:url',
           content: 'https://ngothai2712.net/',
         },
         {
-          key: 'og:locale',
           hid: 'og:locale',
           property: 'og:locale',
           name: 'og:locale',
@@ -76,28 +82,24 @@ export default defineNuxtConfig({
 
         // Twitter
         {
-          key: 'twitter:card',
           hid: 'twitter:card',
           property: 'twitter:card',
           name: 'twitter:card',
           content: 'summary_large_image',
         },
         {
-          key: 'twitter:site',
           hid: 'twitter:site',
           property: 'twitter:site',
           name: 'twitter:site',
           content: 'ngothai2712',
         },
         {
-          key: 'twitter:title',
           hid: 'twitter:title',
           property: 'twitter:title',
           name: 'twitter:title',
           content: 'Ngo Hoang Thai | Front End Developer',
         },
         {
-          key: 'twitter:description',
           hid: 'twitter:description',
           property: 'twitter:description',
           name: 'twitter:description',
@@ -105,7 +107,6 @@ export default defineNuxtConfig({
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
         },
         {
-          key: 'twitter:image',
           hid: 'twitter:image',
           property: 'twitter:image',
           name: 'twitter:image',
