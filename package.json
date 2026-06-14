@@ -11,18 +11,21 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/robots": "^6.1.1",
+    "@nuxtjs/sitemap": "^8.2.1",
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "@types/node": "^25.3.3",
+    "@types/node": "^25.9.3",
     "@vite-pwa/nuxt": "^1.1.1",
-    "nuxt": "^4.3.1",
-    "postcss": "^8.5.6",
+    "nuxt": "^4.4.8",
+    "nuxt-schema-org": "^6.2.1",
+    "postcss": "^8.5.15",
     "postcss-custom-properties": "^15.0.1",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.4",
     "prettier-plugin-css-order": "^2.2.0",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "sass": "^1.97.3",
-    "typescript": "^5.9.3"
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "sass": "^1.101.0",
+    "typescript": "^6.0.3"
   }
 }

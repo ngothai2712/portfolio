@@ -20,6 +20,10 @@ export default defineNuxtConfig({
           type: 'image/png',
           href: 'https://ngothai2712.net/favicon.png',
         },
+        {
+          rel: 'canonical',
+          href: 'https://ngothai2712.net/',
+        },
       ],
       meta: [
         {
@@ -144,7 +148,17 @@ export default defineNuxtConfig({
       },
     ],
     '@vite-pwa/nuxt',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    'nuxt-schema-org',
   ],
+
+  site: {
+    url: 'https://ngothai2712.net',
+    name: 'Ngo Hoang Thai | Front End Developer',
+    description: 'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
+    defaultLocale: 'vi'
+  },
 
   pwa: {
     registerType: 'autoUpdate',

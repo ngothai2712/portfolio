@@ -5,7 +5,7 @@
         <div class="about-img">
           <img
             src="/about.svg"
-            alt=""
+            alt="About Ngo Hoang Thai - Front-End Developer illustration"
             width="320"
             height="320"
             class="about-img__large"

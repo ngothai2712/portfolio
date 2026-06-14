@@ -7,7 +7,7 @@
       <div class="items">
         <div class="item">
           <div class="item-icon">
-            <img src="/location.svg" alt="email" loading="lazy" />
+            <img src="/location.svg" alt="location" loading="lazy" />
           </div>
           <div class="item-right">
             <h3 class="item-title">Location</h3>

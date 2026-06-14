@@ -9,7 +9,7 @@
           </p>
           <ul class="info-contact">
             <li v-for="contact in contactUrl" :key="contact.name">
-              <a :href="contact.url" rel="noreferrer" target="_blank">
+              <a :href="contact.url" rel="noreferrer" target="_blank" :aria-label="contact.name + ' profile'">
                 <img
                   :src="`/${contact.name}.svg`"
                   :alt="contact.name"
@@ -22,7 +22,13 @@
             </li>
           </ul>
         </div>
-        <div class="info-img"></div>
+        <img
+          src="/info.webp"
+          alt="Ngo Hoang Thai - Front End Developer Profile Picture"
+          class="info-img"
+          width="350"
+          height="350"
+        />
       </div>
 
       <div class="tech">
@@ -97,7 +103,7 @@ h1 {
 
   &-img {
     @apply h-[240px] w-[240px] min-w-[240px]
-    border-4 bg-[url('/info.webp')] bg-cover bg-center bg-no-repeat md:h-[350px] md:w-[350px] md:min-w-[350px];
+    border-4 object-cover object-center md:h-[350px] md:w-[350px] md:min-w-[350px];
     animation: morph 8s ease-in-out infinite;
   }
 
