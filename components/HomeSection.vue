@@ -28,6 +28,7 @@
           class="info-img"
           width="350"
           height="350"
+          fetchpriority="high"
         />
       </div>
 

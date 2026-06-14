@@ -46,7 +46,7 @@ img {
 
 .content {
   &-heading {
-    @apply text-sm font-semibold uppercase tracking-widest text-blue-500;
+    @apply text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400;
   }
 
   &-description {

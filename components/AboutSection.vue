@@ -49,7 +49,7 @@
 
 .content {
   &-heading {
-    @apply text-sm font-semibold uppercase tracking-widest text-blue-600;
+    @apply text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400;
   }
 
   &-title {
