@@ -12,13 +12,8 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'icon',
-          type: 'image/x-icon',
-          href: 'https://ngothai2712.net/favicon.ico',
-        },
-        {
-          rel: 'icon',
-          type: 'image/png',
-          href: 'https://ngothai2712.net/favicon.png',
+          type: 'image/svg+xml',
+          href: '/favicon.svg',
         },
         {
           rel: 'canonical',
@@ -162,6 +157,10 @@ export default defineNuxtConfig({
 
   pwa: {
     registerType: 'autoUpdate',
+    devOptions: {
+      enabled: true,
+      type: 'module',
+    },
     manifest: {
       name: 'Portfolio ThaiNH',
       short_name: 'Portfolio ThaiNH',

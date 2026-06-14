@@ -45,6 +45,21 @@
           </li>
         </ul>
       </div>
+
+      <div class="tech tech--tools">
+        <p class="tech-text">Tools</p>
+        <ul class="tech-skills">
+          <li v-for="img in tools" :key="img">
+            <img
+              :src="`/${img}.svg`"
+              :alt="img"
+              width="30"
+              height="30"
+              loading="lazy"
+            />
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
@@ -71,15 +86,23 @@ const techStacks = [
   'tailwind',
   'scss',
 ];
+
+const tools = [
+  'github',
+  'gitlab',
+  'docker',
+  'nginx',
+  'figma',
+];
 </script>
 
 <style scoped lang="scss">
 h1 {
-  @apply mb-3 text-3xl font-bold dark:text-white md:mb-4 md:text-6xl;
+  @apply mb-4 text-4xl font-extrabold tracking-tighter dark:text-white md:mb-6 md:text-6xl md:leading-[1.1];
 }
 
 #home {
-  @apply flex items-center bg-stone-50 pb-12 pt-32 dark:bg-slate-900 md:h-screen md:pb-0 md:pt-0;
+  @apply flex items-center bg-stone-50 pb-12 pt-32 dark:bg-slate-900 md:min-h-[100dvh] md:pb-0 md:pt-0;
 }
 
 .container {
@@ -94,7 +117,7 @@ h1 {
   }
 
   &-description {
-    @apply text-gray-500 dark:text-gray-400;
+    @apply mt-2 text-lg leading-relaxed text-gray-600 dark:text-gray-400 md:max-w-[65ch] md:text-xl;
   }
 
   &-icon {
@@ -127,10 +150,14 @@ h1 {
 }
 
 .tech {
-  @apply mt-8 flex flex-col flex-wrap items-center gap-10 md:mt-16 md:flex-row;
+  @apply mt-12 flex flex-col flex-wrap items-center gap-10 md:mt-24 md:flex-row;
+
+  &--tools {
+    @apply mt-6 md:mt-10;
+  }
 
   &-text {
-    @apply whitespace-nowrap border-b-2 border-b-gray-400 text-xl font-semibold dark:text-white md:border-b-0 md:border-r-2 md:border-r-gray-400 md:pr-4;
+    @apply whitespace-nowrap border-b-2 border-b-gray-400 text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 md:w-[140px] md:border-b-0 md:border-r-2 md:border-r-gray-400 md:pr-6;
   }
 
   &-skills {

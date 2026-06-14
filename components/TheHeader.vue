@@ -1,7 +1,18 @@
 <template>
   <nav class="header">
-    <h3 class="logo">T27</h3>
-    <!--    <IconLogo class="small" />-->
+    <NuxtLink to="/" class="logo-link" title="Home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 200 200" class="logo-svg">
+        <path
+          d="M 95,95 C 35,100 35,30 89,30 C 135,30 155,55 175,45 M 129,45 C 125,125 105,170 75,170 C 35,170 25,145 25,125 C 25,110 40,100 40,105"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="logo-path"
+        />
+      </svg>
+    </NuxtLink>
 
     <div class="header-right">
       <img
@@ -87,12 +98,36 @@ const onResize = () => {
   }
 }
 
-.logo {
-  @apply text-xl font-bold dark:text-white;
+.logo-link {
+  @apply text-black dark:text-white transition-transform hover:scale-110;
+}
+
+.logo-svg {
+  @apply overflow-visible;
+}
+
+.logo-path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawLine 2s ease-in-out forwards;
+}
+
+.logo-link:hover .logo-path {
+  animation: drawLineHover 1.5s ease-in-out forwards;
+}
+
+@keyframes drawLine {
+  0% { stroke-dashoffset: 400; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes drawLineHover {
+  0% { stroke-dashoffset: 400; }
+  100% { stroke-dashoffset: 0; }
 }
 
 .link {
-  @apply font-semibold capitalize;
+  @apply text-sm font-medium uppercase tracking-widest text-gray-600 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white;
 }
 
 svg {

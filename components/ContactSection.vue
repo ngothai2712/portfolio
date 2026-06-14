@@ -37,7 +37,7 @@
 
 <style scoped lang="scss">
 #contact {
-  @apply bg-stone-50 py-24 dark:bg-slate-900;
+  @apply bg-stone-50 py-24 dark:bg-slate-900 md:py-32;
 }
 
 img {
@@ -46,23 +46,23 @@ img {
 
 .content {
   &-heading {
-    @apply text-xl font-bold text-blue-500;
+    @apply text-sm font-semibold uppercase tracking-widest text-blue-500;
   }
 
   &-description {
-    @apply mb-10 mt-2 text-2xl font-bold dark:text-white;
+    @apply mb-12 mt-3 text-3xl font-bold tracking-tight dark:text-white md:text-4xl;
   }
 }
 
 .items {
-  @apply flex flex-col flex-wrap items-center gap-10 md:flex-row md:gap-32;
+  @apply flex flex-col flex-wrap items-center gap-12 md:flex-row md:gap-32;
 }
 
 .item {
-  @apply flex flex-col items-center gap-5 text-center md:flex-row md:text-left;
+  @apply flex flex-col items-center gap-6 text-center md:flex-row md:text-left;
 
   &-title {
-    @apply text-xl font-bold dark:text-white;
+    @apply text-xl font-bold tracking-tight dark:text-white;
   }
 
   &-icon {
@@ -70,11 +70,11 @@ img {
   }
 
   &-mail {
-    @apply transition-all hover:text-blue-500;
+    @apply transition-colors hover:text-blue-500;
   }
 
   &-description {
-    @apply text-lg text-gray-500 dark:text-gray-400;
+    @apply text-base leading-relaxed text-gray-600 dark:text-gray-400 md:text-lg;
   }
 }
 </style>

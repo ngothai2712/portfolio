@@ -34,7 +34,7 @@
 }
 
 .about {
-  @apply flex flex-col items-center justify-center gap-5 py-24 md:flex-row md:justify-between md:gap-20 md:py-10;
+  @apply flex flex-col items-center justify-center gap-10 py-24 md:flex-row md:justify-between md:gap-24 md:py-32;
 
   &-content {
     @apply flex flex-col text-center md:text-left;
@@ -49,15 +49,15 @@
 
 .content {
   &-heading {
-    @apply font-bold text-blue-600;
+    @apply text-sm font-semibold uppercase tracking-widest text-blue-600;
   }
 
   &-title {
-    @apply mb-4 mt-2 text-2xl font-bold dark:text-white;
+    @apply mb-6 mt-3 text-3xl font-bold tracking-tight dark:text-white md:text-4xl;
   }
 
   &-description {
-    @apply text-gray-500 dark:text-gray-400;
+    @apply max-w-[65ch] text-base leading-relaxed text-gray-600 dark:text-gray-400 md:text-lg;
   }
 }
 </style>
