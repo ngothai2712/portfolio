@@ -169,12 +169,17 @@ export default defineNuxtConfig({
       icons: [
         {
           src: 'favicon.svg',
-          sizes: 'any',
+          sizes: '192x192',
           type: 'image/svg+xml',
         },
         {
           src: 'favicon.svg',
-          sizes: 'any',
+          sizes: '512x512',
+          type: 'image/svg+xml',
+        },
+        {
+          src: 'favicon.svg',
+          sizes: '512x512',
           type: 'image/svg+xml',
           purpose: 'any maskable',
         },
