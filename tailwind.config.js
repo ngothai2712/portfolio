@@ -17,6 +17,9 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      fontFamily: {
+        sans: ['Open Sans', 'sans-serif'],
+      },
       spacing: {
         128: '32rem',
         144: '36rem',
@@ -26,5 +29,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

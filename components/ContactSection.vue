@@ -1,5 +1,5 @@
 <template>
-  <section id="contact">
+  <section id="contact" ref="sectionRef">
     <div class="container">
       <h2 class="content-heading">CONTACT</h2>
       <p class="content-description">Don't be shy! Contact me!</p>
@@ -7,7 +7,7 @@
       <div class="items">
         <div class="item">
           <div class="item-icon">
-            <img src="/location.svg" alt="location" loading="lazy" />
+            <Icon name="heroicons:map-pin" class="w-8 h-8 dark:text-white" />
           </div>
           <div class="item-right">
             <h3 class="item-title">Location</h3>
@@ -16,7 +16,7 @@
         </div>
         <div class="item">
           <div class="item-icon">
-            <img src="/email.svg" alt="email" loading="lazy" />
+            <Icon name="heroicons:envelope" class="w-8 h-8 dark:text-white" />
           </div>
           <div class="item-right">
             <h3 class="item-title">Mail</h3>
@@ -33,15 +33,62 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+const sectionRef = ref(null);
+let ctx: gsap.Context;
+
+if (import.meta.client) {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+onMounted(() => {
+  if (!sectionRef.value) return;
+  
+  ctx = gsap.context(() => {
+    // Header animation
+    gsap.from('.content-heading, .content-description', {
+      scrollTrigger: {
+        trigger: sectionRef.value,
+        start: 'top 90%', // Trigger earlier to ensure it fires even on short screens
+      },
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+
+    // Contact items staggering in
+    gsap.from('.item', {
+      scrollTrigger: {
+        trigger: sectionRef.value,
+        start: 'top 85%', // Share the main section trigger so it doesn't get stuck
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: 'back.out(1.2)',
+      delay: 0.2 // Delay slightly after header
+    });
+  }, sectionRef.value);
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
+</script>
 
 <style scoped lang="scss">
 #contact {
-  @apply bg-stone-50 py-24 dark:bg-slate-900 md:py-32;
+  @apply bg-stone-50 py-20 dark:bg-slate-900 md:py-24;
 }
 
 img {
-  @apply h-8 w-8 dark:invert;
+  @apply h-8 w-8;
 }
 
 .content {
@@ -50,7 +97,7 @@ img {
   }
 
   &-description {
-    @apply mb-12 mt-3 text-3xl font-bold tracking-tight dark:text-white md:text-4xl;
+    @apply mb-12 mt-3 text-4xl font-bold tracking-tighter leading-none dark:text-white md:text-5xl;
   }
 }
 
@@ -66,7 +113,7 @@ img {
   }
 
   &-icon {
-    @apply rounded-full p-6 text-blue-500 shadow-md dark:bg-slate-300/10;
+    @apply flex h-20 w-20 items-center justify-center rounded-full text-blue-500 shadow-md dark:bg-slate-300/10;
   }
 
   &-mail {

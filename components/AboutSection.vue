@@ -1,9 +1,9 @@
 <template>
-  <section id="about">
+  <section id="about" ref="sectionRef">
     <div class="container">
       <div class="about">
         <div class="about-img">
-          <img
+          <NuxtImg
             src="/about.svg"
             alt="About Ngo Hoang Thai - Front-End Developer illustration"
             width="320"
@@ -28,13 +28,58 @@
   </section>
 </template>
 
-<style scoped lang="scss">
+<script setup lang="ts">
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+const sectionRef = ref(null);
+let ctx: gsap.Context;
+
+if (import.meta.client) {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+onMounted(() => {
+  if (!sectionRef.value) return;
+  
+  ctx = gsap.context(() => {
+    // Animate Image sliding in from left
+    gsap.from('.about-img', {
+      scrollTrigger: {
+        trigger: sectionRef.value,
+        start: 'top 80%',
+      },
+      x: -60,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'power3.out'
+    });
+
+    // Animate Text sliding in from right
+    gsap.from('.about-content > *', {
+      scrollTrigger: {
+        trigger: sectionRef.value,
+        start: 'top 80%',
+      },
+      x: 60,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+  }, sectionRef.value);
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
+</script><style scoped lang="scss">
 #about {
   @apply dark:border-b dark:border-t dark:border-slate-300/10;
 }
 
 .about {
-  @apply flex flex-col items-center justify-center gap-10 py-24 md:flex-row md:justify-between md:gap-24 md:py-32;
+  @apply flex flex-col items-center justify-center gap-10 py-20 md:flex-row md:justify-between md:gap-24 md:py-24;
 
   &-content {
     @apply flex flex-col text-center md:text-left;
@@ -53,7 +98,7 @@
   }
 
   &-title {
-    @apply mb-6 mt-3 text-3xl font-bold tracking-tight dark:text-white md:text-4xl;
+    @apply mb-6 mt-3 text-4xl font-bold tracking-tighter leading-none dark:text-white md:text-5xl;
   }
 
   &-description {

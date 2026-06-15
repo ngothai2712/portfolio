@@ -1,3 +1,7 @@
+html, body {
+  @apply overflow-x-clip;
+}
+
 .container {
   @apply m-auto max-w-4xl px-5;
 }

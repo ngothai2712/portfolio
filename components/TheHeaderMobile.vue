@@ -1,25 +1,21 @@
 <template>
   <transition name="slide-fade">
     <nav class="headerMobile" v-if="isShowModal">
-      <img
-        src="/close.svg"
-        alt="#"
-        class="headerMobile-icon"
-        width="40"
-        height="40"
-        loading="lazy"
+      <Icon
+        name="heroicons:x-mark"
+        class="headerMobile-icon w-10 h-10 cursor-pointer"
         @click="isShowModal = !isShowModal"
       />
 
       <div class="headerMobile-links">
         <NuxtLink
-          :to="`#${menu}`"
-          class="headerMobile-link"
           v-for="menu in menus"
-          :key="menu"
+          :key="menu.name"
+          :to="menu.to"
+          class="headerMobile-link"
           @click="onClick"
         >
-          {{ menu }}
+          {{ menu.name }}
         </NuxtLink>
       </div>
     </nav>
@@ -33,7 +29,7 @@ const props = defineProps({
     default: false,
   },
   menus: {
-    type: Array,
+    type: Array as () => Array<{ name: string; to: string }>,
     default: () => [],
   },
 });
@@ -59,7 +55,7 @@ const onClick = () => {
   @apply fixed bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-white dark:bg-slate-900 dark:text-white;
 
   &-icon {
-    @apply absolute right-8 top-8 dark:invert;
+    @apply absolute right-8 top-8;
   }
 
   &-links {

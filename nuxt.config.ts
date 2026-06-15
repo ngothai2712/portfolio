@@ -22,58 +22,49 @@ export default defineNuxtConfig({
       ],
       meta: [
         {
-          hid: 'description',
           property: 'description',
           name: 'description',
           content:
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
         },
         {
-          hid: 'og:title',
           property: 'og:title',
           name: 'og:title',
           content: 'Ngo Hoang Thai | Front End Developer',
         },
         {
-          hid: 'og:title',
           property: 'og:title',
           name: 'og:title',
           content: 'ngothai2712 | Front End Developer',
         },
         {
           key: 'og:title',
-          hid: 'og:title',
           property: 'og:title',
           name: 'og:title',
           content: 'Ngô Hoàng Thái | Front End Developer',
         },
         {
-          hid: 'og:description',
           property: 'og:description',
           name: 'og:description',
           content:
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
         },
         {
-          hid: 'og:type',
           property: 'og:type',
           name: 'og:type',
           content: 'website',
         },
         {
-          hid: 'og:image',
           property: 'og:image',
           name: 'og:image',
           content: 'https://ngothai2712.net/info.webp',
         },
         {
-          hid: 'og:url',
           property: 'og:url',
           name: 'og:url',
           content: 'https://ngothai2712.net/',
         },
         {
-          hid: 'og:locale',
           property: 'og:locale',
           name: 'og:locale',
           content: 'vi_VN',
@@ -81,32 +72,27 @@ export default defineNuxtConfig({
 
         // Twitter
         {
-          hid: 'twitter:card',
           property: 'twitter:card',
           name: 'twitter:card',
           content: 'summary_large_image',
         },
         {
-          hid: 'twitter:site',
           property: 'twitter:site',
           name: 'twitter:site',
           content: 'ngothai2712',
         },
         {
-          hid: 'twitter:title',
           property: 'twitter:title',
           name: 'twitter:title',
           content: 'Ngo Hoang Thai | Front End Developer',
         },
         {
-          hid: 'twitter:description',
           property: 'twitter:description',
           name: 'twitter:description',
           content:
             'Welcome to my portfolio. Hi there! I am a Front-End Developer.',
         },
         {
-          hid: 'twitter:image',
           property: 'twitter:image',
           name: 'twitter:image',
           content: 'https://ngothai2712.net/info.webp',
@@ -115,7 +101,6 @@ export default defineNuxtConfig({
         //PWA
         {
           key: 'theme-color',
-          hid: 'theme-color',
           name: 'theme-color',
           content: '#0f172a',
         },
@@ -142,11 +127,28 @@ export default defineNuxtConfig({
         base64: false,
       },
     ],
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxtjs/supabase',
     '@vite-pwa/nuxt',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     'nuxt-schema-org',
   ],
+
+  supabase: {
+    redirectOptions: {
+      login: '/admin/login',
+      callback: '/confirm',
+      include: ['/admin(/*)?'],
+      exclude: [],
+      cookieRedirect: false,
+    }
+  },
+
+  image: {
+    domains: ['veegnfldvnyowpbrzjdy.supabase.co'],
+  },
 
   site: {
     url: 'https://ngothai2712.net',
@@ -160,6 +162,7 @@ export default defineNuxtConfig({
     devOptions: {
       enabled: true,
       type: 'module',
+      suppressWarnings: true,
     },
     manifest: {
       name: 'Portfolio ThaiNH',
@@ -201,7 +204,6 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'dark', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
-    hid: 'nuxt-color-mode-script',
     globalName: '__NUXT_COLOR_MODE__',
     componentName: 'ColorScheme',
     classPrefix: '',

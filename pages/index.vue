@@ -1,6 +1,5 @@
 <template>
   <main class="main">
-    <TheHeader />
     <LazyHomeSection />
     <LazyAboutSection />
     <!--    <LazyProjectSection />-->

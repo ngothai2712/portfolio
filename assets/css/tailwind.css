@@ -8,3 +8,12 @@
     font-family: 'Open Sans', system-ui, sans-serif;
   }
 }
+
+/* Fallback for browsers without View Transitions */
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 0.3s ease-out !important;
+  transition-delay: 0 !important;
+}
